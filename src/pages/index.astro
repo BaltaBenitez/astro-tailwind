@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import aloHero from '../assets/alo-hero.webp';
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout pageTitle="INDEX" pageDesc='hola'>
+	<article class="mx-auto grid grid-cols-1 lg:grid-cols-2">
+		<div class="my-10 mx-auto text-center">
+			<h1 class="text-4xl font-bold">ASTON MARIN F1 RACING</h1>
+			<h2 class="my-20 text-2xl uppercase">amr-24</h2>
+			<p class="uppercase text-6xl mr-60 my-10">i / am</p>
+			<p class="text-balance text-2md leading-loose">Become an I / AM member and get 10% off your first order, plus early access to exclusive product launches and releases.</p>
+			<button class="bg-green-600 hover:bg-green-800 transition delay-200 rounded my-10 px-10 py-1"><a href="./registro">JOIN / AM</a></button>
+		</div>
+		<div>
+			<Image src={aloHero} width={500} alt='hero' class='mx-auto'/>
+		</div>
+	</article>
+</Layout>

@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout pageTitle="registro">
+    <section class="box-border w-full sm:w-10/12 md:w-8/12 lg:w-7/12 h-screen mt-36 mb-44 mx-auto px-4">
+        <h2 class="text-center text-lg sm:text-xl lg:text-2xl">Create your free I / AM membership account to be the first to see the latest news and merchandise drops, access exclusive experiences and more.</h2>
+        <form action="/submit_form" method="post" class="mb-44">
+            <div class="py-6 grid grid-cols-1">
+                <label class="uppercase" for="first-name">First Name*</label>
+                <input class="my-2 py-1 px-2 backdrop-opacity-10 backdrop-invert bg-white/30" type="text" id="first-name" name="first-name">
+                <label class="uppercase" for="last-name">Last Name*</label>
+                <input class="my-2 py-1 px-2 backdrop-opacity-10 backdrop-invert bg-white/30" type="text" id="last-name" name="last-name">
+            </div>
+    
+            <div class="py-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                    <label class="uppercase" for="date-of-birth">Date of Birth*</label>
+                    <input class="w-full lg:w-80 my-2 py-1 backdrop-opacity-10 backdrop-invert bg-white/30" type="date" id="date-of-birth" name="date-of-birth">
+                </div>
+                <div>
+                    <label class="uppercase" for="country">Country*</label>
+                    <input class="w-full lg:w-80 my-2 py-1 backdrop-opacity-10 backdrop-invert bg-white/30" type="text" id="country" name="country">
+                </div>
+            </div>
+    
+            <div class="py-6 grid grid-cols-1">
+                <label class="uppercase" for="email">Email Address*</label>
+                <input class="my-2 py-1 px-2 backdrop-opacity-10 backdrop-invert bg-white/30" type="email" id="email" name="email">
+                <label class="uppercase" for="password">Confirm Password*</label>
+                <p class="my-2 text-sm">Must be 8-16 characters including at least one number, one lowercase letter and one uppercase letter.</p>
+                <input class="py-1 px-2 backdrop-opacity-10 backdrop-invert bg-white/30" type="password" id="password" name="password">
+            </div>
+    
+            <div class="my-5">
+                <h2 class="h2-yellow">OPT IN</h2>
+                <p>Don’t miss out: I want Aston Martin Formula One Team and Aston Martin Lagonda to keep me informed via Email, SMS, or direct message about latest news, competitions and special offers from the team and our partners. <span>Read more</span>
+                </p>
+            </div>
+    
+            <div>
+                <button class="relative overflow-hidden text-center py-2 px-5 bg-green-500 text-black font-bold transition-colors duration-300 ease-out" type="submit">
+                    <span class="absolute inset-0 w-full h-full bg-white transform -translate-x-full transition-transform duration-300 ease-out"></span>
+                    <span class="relative z-10">Continue!</span>
+                </button>
+            </div>
+        </form>
+    </section>    
+</Layout>
+
+<style>
+    .h2-yellow, label{
+        color:yellow;
+    }
+
+    input{
+        color: #ffffff80;
+        outline: none;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: solid white 1px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: start;
+    }
+
+    button:hover span:first-child {
+        transform: translateX(0);
+    }
+</style>

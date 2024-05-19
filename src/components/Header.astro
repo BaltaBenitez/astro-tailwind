@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import aloHelmet from '../assets/alo-helmet.webp';
+---
+
+<header class="bg-white bg-opacity-10 backdrop-blur-md border-b border-white border-opacity-20 shadow-lg z-50 text-black fixed top-0 left-0 right-0 width-full py-4 flex-col justify-center items-center text-center">
+    <a href="/">
+        <Image src={aloHelmet} alt='logo' class="w-10 mx-auto mb-1" />
+    </a>
+    <nav>
+        <a class="px-4 py-2" href="/fechas" >fechas</a>
+        <a class="px-4 py-2" href="/registro" >registro</a>
+    </nav>
+</header>

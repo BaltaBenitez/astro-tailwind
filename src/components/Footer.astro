@@ -1,0 +1,38 @@
+---
+const { pageTitle } = Astro.props;
+const footerClasses = {
+    "mt-96 md:mt-80": pageTitle === 'registro',
+    "mx-auto mt-10": pageTitle !== 'registro',
+};
+---
+
+<footer class:list={footerClasses}>
+   <section class="grid gap-1 grid-cols-2 lg:grid-cols-4">
+        <div class="capitalize flex px-5">
+            <h3 class="px-4">Shop</h3>
+            <ul class="cursor-pointer">
+                <li>teamwear</li>
+                <li>fernando alonso</li>
+                <li>lance stroll</li>
+                <li>Mens</li>
+                <li>womens</li>
+                <li>kids</li>
+            </ul>
+        </div>
+        <div class="capitalize flex px-5">
+            <h3 class="px-4">Support</h3>
+            <ul class="text-sm cursor-pointer">
+                <li>order tracker</li>
+                <li>delivery & returns</li>
+                <li>contact</li>
+                <li>chat</li>
+                <li>polices</li>
+                <li>terms & conditions</li>
+                <li class="hover:text-yellow-300">aston maritn f1 team</li>
+            </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-2">
+            <p class="p-5">The official Aston Martin Aramco Formula One® Team Store is operated by stichd sportmerchandising, a proud member of the PUMA Group since 2012 and is headquartered in ‘s-Hertogenbosch, Netherlands.</p>
+        </div>
+   </section>
+</footer>

@@ -1,0 +1,21 @@
+---
+import CardsFetchas from '../components/CardsFetchas.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout pageTitle='Fechas'>
+    <article class="mt-28 lg:mb-[6rem]">
+        <h2 class="mx-auto my-4 text-center text-2xl" >Fechas de los siguientes circuitos</h2>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
+            <CardsFetchas nameGP="Australia" raceGP="Spielberg" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Emilia Roma Goma" raceGP="Imola" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Miami" raceGP="Miami" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Spain" raceGP="Barcelona" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Monaco" raceGP="Monaco" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Qatar" raceGP="Lusail" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Mexico" raceGP="Mexico City" dateGP="10-10-2022" timeGP="12hs"/>
+            <CardsFetchas nameGP="Abu Dhabi" raceGP="Yas Marina" dateGP="10-10-2022" timeGP="12hs"/>
+        </section>
+    </article>
+</Layout>
+

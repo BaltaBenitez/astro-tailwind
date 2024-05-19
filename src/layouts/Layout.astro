@@ -1,0 +1,38 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+    pageTitle: string,
+    pageDesc?: string,
+}
+
+const { pageTitle, pageDesc } = Astro.props
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" href="alo.webp" type="image/webp" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+    </head>
+    <body>
+        <Header />
+        <main class="w-[90%] mt-16 mx-auto">
+            <slot />
+        </main>
+        <Footer pageTitle={pageTitle}/>
+    </body>
+</html>
+
+<style is:global>
+    body{
+        font-family: system-ui, sans-serif;
+        /* background-color: rgb(22 163 74 / 1); */
+        background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+        color: white;
+    }
+</style>
